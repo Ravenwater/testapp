@@ -13,7 +13,7 @@ build_binary() {
   set -u
   echo -e "${yarrow} building binary ${brwhte}testapp${creset}"
   docker pull casualjim/builder
-  docker run --rm -it -v `pwd`:/go/src/github.com/casualjim/testapp -w /go/src/github.com/casualjim/testapp  casualjim/builder "$@"
+  winpty docker run --rm -it -v `pwd`:/go/src/github.com/Ravenwater/testapp -w /go/src/github.com/Ravenwater/testapp  casualjim\/builder "$@"
 }
 
 build_container() {
